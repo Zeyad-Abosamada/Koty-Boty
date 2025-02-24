@@ -37,54 +37,38 @@
             100% { text-shadow: 0 0 20px #ffcccb, 0 0 30px #ff66b2; }
         }
 
-        /* 🎂 تحسين التورتة مع أنيميشن */
+        /* 🎂 تصميم التورتة */
         .cake {
             position: relative;
-            width: 250px;
-            height: 180px;
+            width: 200px;
+            height: 150px;
             background: #ffcc80;
             border-radius: 15px;
             margin: 50px auto 0;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             overflow: hidden;
-            animation: bounce 2s infinite ease-in-out;
         }
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
         .layer {
             position: absolute;
             width: 100%;
-            height: 50px;
+            height: 40px;
+            background: #ff8a65;
             border-radius: 15px;
             bottom: 0;
         }
-        .layer:nth-child(1) { background: #ff8a65; bottom: 0; }
-        .layer:nth-child(2) { background: #e57373; bottom: 50px; }
-        .layer:nth-child(3) { background: #ba68c8; bottom: 100px; }
+        .layer:nth-child(2) { bottom: 40px; background: #e57373; }
+        .layer:nth-child(3) { bottom: 80px; background: #ba68c8; }
 
-        /* 🕯 شموع متحركة */
-        .candles {
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 15px;
-        }
+        /* 🕯 تصميم الشموع */
         .candle {
+            position: absolute;
             width: 15px;
             height: 50px;
             background: yellow;
             border-radius: 5px;
-            position: relative;
-            animation: shake 1.5s infinite alternate ease-in-out;
-        }
-        @keyframes shake {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(3deg); }
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .flame {
             position: absolute;
@@ -102,7 +86,7 @@
             100% { opacity: 0.7; transform: scale(1.2); }
         }
 
-        /* 🎉 تأثير البالونات */
+        /* 🎉 تأثير البالونات */
         .balloon {
             position: absolute;
             width: 50px;
@@ -126,28 +110,25 @@
             0% { transform: translateY(0); }
             100% { transform: translateY(-120vh); }
         }
-
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>🎉 Happy Birthday! 🎉</h1>
-        <p>I love you so much ❤</p>
+        <p>كسم اللى جابك  ❤</p>
         <div class="cake">
             <div class="layer"></div>
             <div class="layer"></div>
             <div class="layer"></div>
-            <div class="candles">
-                <div class="candle"><div class="flame"></div></div>
-                <div class="candle"><div class="flame"></div></div>
-                <div class="candle"><div class="flame"></div></div>
+            <div class="candle">
+                <div class="flame"></div>
             </div>
         </div>
     </div>
 
     <script>
-        // 🎈 إضافة بالونات متحركة
+        // 🎈 إضافة بالونات متحركة
         function createBalloon() {
             let balloon = document.createElement("div");
             balloon.classList.add("balloon");
